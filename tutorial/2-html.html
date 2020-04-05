@@ -1,0 +1,152 @@
+<style>
+    img {
+        max-width: 99%;
+        max-height: 99%;    
+    }
+</style>
+
+<h1>What is HTML?</h1>
+
+<p>Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications. With
+    Cascading Style Sheets (CSS) and JavaScript, it forms a triad of cornerstone technologies for the World Wide Web.
+</p>
+
+<p>In other words - each and every webpage which you see on the web uses HTML. Let's check it. Open https://facebook.com
+    , click on any free space (background, where nothing is displayed, do not click on text, image, table or anything-
+    click on the white/grey background ) with your right mouse button and choose "View page source".
+</p>
+
+<p>You will see odd characters like below:
+</p>
+
+<pre><code>
+    &lt;div class=&quot;_csi&quot; id=&quot;u_0_n&quot;&gt;&#13;&#10;        &lt;a class=&quot;_1gbd _1gbe&quot; href=&quot;/login/&quot; id=&quot;u_0_o&quot; name=&quot;u_0_o&quot;&gt;&lt;/a&gt;&#13;&#10;    &#13;&#10;        &lt;div class=&quot;_1gax&quot;&gt;&lt;/div&gt;&#13;&#10;    &#13;&#10;        &lt;div class=&quot;_1gaz _1ga- _50f6&quot;&gt;&#13;&#10;          Add new account&#13;&#10;        &lt;/div&gt;&#13;&#10;      &lt;/div&gt;&#13;&#10;    &#13;&#10;      &lt;div class=&quot;_4bl7 _m-_ _8fgm&quot;&gt;&#13;&#10;        &lt;div class=&quot;_8e63 _ihd _3ma mbs _6n _6s _6v&quot;&gt;&#13;&#10;          Create new account&#13;&#10;        &lt;/div&gt;&#13;&#10;    &#13;&#10;        &lt;div class=&quot;_8e4m _3m9 mbl _6o _6s _mf&quot;&gt;&lt;/div&gt;&#13;&#10;      &lt;/div&gt;
+    </code></pre>
+<p>Not the entire code is stricty HTML, there are also CSS and JS elements but HTML is a baseline for our website.</p>
+<p>So let's see what we gonna learn today and what you will be able to build by the end of this lesson.</p>
+
+<a href="../final/myWebsite/index.html">Click here to see website we will build today</a>
+
+
+<h2>Let's start!</h2>
+
+
+<p>What we have to do:</p>
+
+<ol>
+    <li>Create folder for our website</li>
+    <li>Create HTML and CSS files</li>
+    <li>Create structure of our website</li>
+    <li>Link main and subpage with each other</li>
+    <li>Style our page</li>
+</ol>
+
+<p>We will start setup. Our app will consist of 3 files:
+    <ul>
+        <li>2 HTML files (index.html and details.html)</li>
+        <li>1 CSS file (containing styles)</li>
+    </ul>
+</p>
+
+<p>Create a new folder called <i>myWebsite</i> and open it in Visual Studio Code.</p>
+
+<p>Create new file called index.html and paste the following code:</p>
+
+<pre><code>
+&lt;!DOCTYPE html&gt;&#13;&#10;&lt;html&gt;&#13;&#10;&#13;&#10;    &lt;head&gt;&#13;&#10;        &lt;title&gt;My Website&lt;/title&gt;&#13;&#10;    &lt;/head&gt;&#13;&#10;&#13;&#10;    &lt;body&gt;&#13;&#10;    &lt;/body&gt;&#13;&#10;&#13;&#10;&lt;/html&gt;
+</code></pre>
+
+<p>Save the fail and create a new one called <i>project.html</i> and paste the same content as <i>index.html</i></p>
+
+<p>Change title to <i>Project details</i>. Type <i>Coming soon</i> in between</p>
+
+&lt;body&gt; tags:
+
+<pre><code>
+&lt;body&gt;&#13;&#10;    Coming Soon!&#13;&#10;&lt;/body&gt;
+</code></pre>
+
+<p>And finally create new file called styles.css and leave it empty for now.</p>
+
+<p>We will start with index.html</p>
+
+<p>Let's analyze how our website is build.</p>
+
+<img src="assets/html-head-body.png" alt="HTML HEAD BODY relation">
+
+<p>Inside the body, create a heading, paragraph and div.</p>
+
+<pre><code>
+&lt;h1&gt; Our heading (aka title)&lt;/h1&gt;&#13;&#10;&lt;p&gt;Some paragraph, with some text &lt;/p&gt;&#13;&#10;&lt;div&gt;And div which stand for divider, it&apos;s meant to be used as container of a data.&lt;/div&gt;
+</code></pre>
+
+
+<p>Now let's have a closer look at our page in a console.</p>
+
+<p><strong>Note:</strong> If you don't know how to open/use console, check <a href="TODO">this lesson first!</a></p>
+
+<img src="assets/developer-console-preview.gif" alt="Developers console preview">
+
+<p> &lt;p&gt; and &lt;div&gt; looks simmilar but they have semantic difference - a &lt;div&gt; element is designed to describe a container of data whereas a &lt;p&gt; element is designed to describe a paragraph of content. If you need a generic container purely for layout purposes then use a &lt;div&gt; . If you need an element to describe a paragraph of content then use a &lt;p&gt; </p>
+
+<!-- 
+Disclaimer:
+
+Ability to test your styles , preview etc.
+Changes are not permmaent
+Server is sending html to us and we can change but doesnt change server side. -->
+
+<h2>Tags</h2>
+
+<p> &lt;body&gt;, &lt;head&gt;, &lt;h1&gt;, &lt;p&gt;, &lt;div&gt; - these are all HTML elements called <strong>tags.</strong> </p>
+
+<p>An HTML element usually consists of a start tag and end tag, with the content inserted in</p>
+
+<pre><code>
+<tagname>content goes here... </tagname>
+</code></pre>
+like we've seen before: 
+
+<pre><code>
+&lt;p&gt;Some paragraph, with some text &lt;/p&gt;    &#13;&#10;</code></pre>
+
+<p>however, there are singular tags which don't require closing tags i.e.:</p>
+
+<pre><code>
+&lt;br/&gt;&#13;&#10;&lt;img src=&quot;myCat.jpg&quot; alt=&quot;Image showing cat&quot; /&gt;
+</code></pre>
+
+<p><strong>Note:</strong> For the sake of this tutorial, it's sufficient knowledge, however, in order to really learn HTML and CSS you should learn more about tags later.</p>
+<p>After finishin this tutorial, learn more about tags <a href="https://mdbootstrap.com/education/html/chapter-1-lesson-4/">here.</a> </p>
+
+<h2>Nested HTML Elements</h2>
+
+
+<p>As you can see base on our current code - &lt;h1&gt;, &lt;p&gt;, and &lt;div&gt; tags are nested under &lt;body&gt; tag, which is nested under &lt;html&gt; tag which is a top tag. Netsing allows us to group elements and make code <strong>more readable</strong>.  </p>
+
+
+<h2>Attributes</h2>
+
+<p>Expect for the fact that we can put some data in between tags, they (tags) can also have attributes, like &lt;img&gt; tag which you have already seen.</p>
+
+<p>
+    <ol>
+        <li>All HTML elements <strong>can have attributes</strong>.</li>
+        <li>Attributes provide <strong>additional information</strong> about an element.</li>
+        <li>Attributes are always specified in <strong>the start tag</strong></li>
+    </ol>
+</p>
+
+<p>Example:</p>
+
+<pre><code>
+&lt;img src=&quot;cat.jpg&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;   &#13;&#10;
+</code></pre>
+
+<p>One of the most commonly used attribute is a <i>class</i> attribute which allows us to apply CSS styles to our HTML elements. </p>
+
+<p>We will learn about it in the <a href="3-css.html">next lesson.</a></p>
+
+<p>After finishin this tutorial, learn more about attributes <a href="https://mdbootstrap.com/education/html/chapter-1-lesson-5/">here.</a> </p>
+
+

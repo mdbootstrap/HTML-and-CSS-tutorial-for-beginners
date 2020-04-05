@@ -1,0 +1,126 @@
+<style>
+    img {
+        max-width: 99%;
+        max-height: 99%;    
+    }
+</style>
+<h2>What is CSS</h2>
+
+<p>
+    <ul>
+        <li><strong>CSS</strong> stands for <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</li>
+        <li>CSS describes how HTML elements are to be displayed on screen</li>
+        <li>External stylesheets are stored in CSS files</li>
+    </ul>
+</p>
+
+<h2>HTML and CSS relation</h2>
+
+
+<p>In order to understand what is the relation between HTML and CSS () in any website, let's have look at following image:</p>
+
+<img src="assets/html-css-relationship.jpg" alt="HTML CSS relationship">
+
+<p>HTML gives our website structure while CSS is taking care of the presentation layer. We will show that on the example.</p>
+
+<p>As we said in the previous lesson our paragraph and div can also have atributes, one of the most common is a class name. Class name allows us to apply CSS on given HTML element, let's add some classes to our tags.</p>
+
+<pre><code>
+&lt;h1 class=&quot;heading&quot;&gt; Our heading (aka title)&lt;/h1&gt;&#13;&#10;&lt;p class=&quot;summary&quot;&gt;Some paragraph, with some text &lt;/p&gt;&#13;&#10;&lt;div class=&quot;details&quot;&gt;And div which stand for divider, it&apos;s meant to be used as container of a data.&lt;/div&gt;
+</code></pre>
+
+<p>Add new tag for styles within the &lt;head&gt;&lt;/head&gt; tags.</p>
+
+
+<pre><code>
+&lt;style&gt;&#13;&#10;&#13;&#10;&lt;/style&gt;
+</code></pre>
+
+<p>Now we can add styles to our website. Let's add some styles to our heading</p>
+
+<pre><code>
+&lt;style&gt;&#13;&#10;.heading{&#13;&#10;    font-size: 100px;&#13;&#10;}  &#13;&#10;&lt;/style&gt;
+</code></pre>
+
+
+<p>Refresh our page.</p>
+
+<p>This is a heading :) How it works? Basically it says to our browser - if you find style for a given class name, apply given font size. </p>
+
+<p>Using CSS we can change size,color, margins and even transform almost anything on our website. </p>
+
+<p>Let's change color of our paragraph and add some border to our div. </p>
+
+<p><i>Note:</i> You don't have to remember all CSS properties now, we will learn them in a future. </p>
+
+<pre><code>
+.summary{
+    color: blue;
+}
+.details{
+    border: solid 1px red;
+}
+</code></pre>
+
+<p><strong>Note:</strong> Remember to add above classes in between &lt;style&gt;&lt;/style&gt; tags!</p>
+
+<p>As you can see we are applying CSS only to dedicated elements, changing color of our paragraph doesn't change the color of our heading. </p>
+
+
+<p><strong>Good to know:</strong> You should learn using Dveloper Tools as soon as possible - this will make your work waaaaay easier.</p>
+
+<p>Developer console which is part of a Developer Tools mechanism built in all modern web browsers is a powerfull tool. It allows you to:
+    <ul>
+        <li>preview styles applied to our element</li>
+        <li>check from where given style is coming from</li>
+        <li>modify styles "on the fly"</li>
+    </ul>
+</p>
+
+<img src="assets/developer-console-css.gif" alt="Developer console css preview">
+
+<p><strong>Note:</strong>Changes you are making in the console are not permanent! They will disappear once you refresh the web page.</p>
+
+
+<h2>External stylesheet file</h2>
+
+<p>As you can see, we are writing an CSS inside our index.html file - this is not a good practice. Lets move styles to style.css file which we crated at the begining. </p>
+
+<p><strong>Note! </strong> You don't need &lt;style&gt; &lt;/style&gt; tags when you're writing in separate stylesheet file so remove it.</p>
+
+<p>No we have to somehow connect our style file with index.html file, we will use it using <link> tag which will be placed in between <head></head> tags.  </p>
+
+
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;&#13;&#10;
+
+
+
+<p>But our styles doesn't work as they used to , why ? Let's check our console.  </p>
+
+<img src="assets/console-filename-error.gif" alt="Console wrong filename error">
+
+<p>Our page cannot load <i>styles.css</i> file becasue we made a typo, we used <i>style.css</i> instead of <i>styles.css</i> (note plural vs singular). Let's fix it: </p>
+
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;&#13;&#10;
+
+
+<p>This is why you need to get familiar with the console - it shows you all error you can possibly make. </p>
+
+
+<p>A proper way to move our styles to separate file:</p>
+
+<img src="assets/export-css-to-file.gif" alt="Export css styles to separate file">
+
+
+<p>OK. From now on you know how HTML atribute works and that we can style them using diffent styles. I will show you how you can create and style basic elements to achieve a <a href="../final/myWebsite/index.html">final result </a>. </p>
+
+<p>Don't worry if you dont understand all tags or classes - IT IS NORMAL. Once we will be done, go through following tutorials to get familiar with HTML/CSS. And remember - you do not have to remember everything by hearth. You will lear in while coding more and more. I also suggest to add tutorials to your bookmarks, you will be always able to get back to them to remind how to use differnet tags/clasess. 
+
+<ul>
+    <li><a href="https://mdbootstrap.com/education/html/"></a>Full free HTML tutorial</li>
+    <li><a href="https://mdbootstrap.com/education/css/">Full free CSS tutorial</a></li>
+</ul>
+
+</p>
+
+<p>Let's built our first website, go to the <a href="4-website-structure.html"> lesson four</a>.</p>

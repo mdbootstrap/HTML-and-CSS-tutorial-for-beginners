@@ -1,0 +1,281 @@
+<style>
+    img {
+        max-width: 99%;
+        max-height: 99%;    
+    }
+</style>
+
+<h2>1. Remove all old styles from <i>styles.css</i></h2>
+
+<p>If you didn't do that before.</p>
+
+<h2>Style body and html tags</h2>
+
+<p>Our body and html are not 100% high. We can check that using Developer Tools: </p>
+
+<img src="assets/console-body-height.gif" alt="HTML and BODY height">
+
+<p><i>Note:</i> height of the HTML and BODY on your screen might be different - it's ok.</p>
+
+<p>We have to set height using CSS.</p>
+
+<pre><code>
+html,body {
+    height: 100%
+}
+</code></pre>
+
+<p>Check hegiht before and after in inspector.</p>
+
+<p>As you can already see we can apply styles to more than one selectors at the same time (html and body)</p>
+
+<h2>Body background</h2>
+
+<p>Now when our body is 100% heigh, let's change our background from white color to image:</p>
+
+<pre><code>
+body{
+    background-image:url(https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+}    
+</code></pre>
+
+<p>Our image is too big now. Let's resize it:</p>
+
+<pre><code>
+background-size: cover;
+</code></pre>
+
+<p>And reposition:</p>
+ 
+<pre><code>
+background-position: center;    
+</code></pre>
+
+<p>Since our image has different colors, it will be diffcult to type anything on it. Let's add some solid color layer:</p>
+
+<pre><code>
+background-color:#051f35;
+</code></pre>
+
+<p>And mix it with the image:</p>
+
+<pre><code>
+background-blend-mode: screen ;
+</code></pre>
+
+<h2>Something new - asterix (*)</h2>
+
+<p>As you noticed our text disappeard. It actaully didn't disappeard but become invisible or rather difficult to read beacuse we have black text on dark background. </p>
+
+<p>You already know that we can apply CSS to certain elements but what if we want to apply it to all elements one the website? Then we can use * selector which literally "everything". It will apply styles to each and every element on the webpage. </p>
+
+<p>I.e. instead of changing color of our heading nad paragraphs indivudally, we can change collor of all elements in the website at once.</p>
+
+<pre><code>
+*{
+    color: white;
+}
+</code></pre>
+
+<h2>Important dot (.)</h2>
+
+<p>You may noticed that before we were using class="" atribute in HTML tags and .classname in css fiels to apply styles only to element having this class only. In our previous steps we just used html and body tag name without class. This means that it will be applied to all tags. I.e. if we use  p {color: blue} we will change color of all paragraphs on the website to blue. </p>
+
+<h2> <i>.heading </i>  class</h2>
+
+<p>Lets move to .heading div. We want our div to be centered both vertically and horizaontally </p>
+
+<img src="assets/heading-positioning.jpg" alt="Heading div postion">
+
+<p>Let's define it's size:</p>
+
+<pre><code>
+.heading{
+    width: 600px;
+    height: 400px;
+}    
+</code></pre>
+
+<p>And let's center it both vertically, as well as horizontally:</p>
+
+<pre><code>
+margin: auto;
+position:absolute;
+top: 0px; bottom: 0px; right: 0px; left: 0px;
+</code></pre>
+
+<p><i>Note:</i> Don't worry if you don't understand some of the syntax. We will cover that soon. For now just remember that this is one of the way to postion div to the center.</p>
+
+<h2>Styling title </h2>
+
+<p>Let's center our title:</p>
+
+<pre><code>
+.title{
+    text-align: center;
+}
+</code></pre>
+
+<p>Increase the font size to 80px:</p>
+
+<pre><code>
+font-size: 80px;
+</code></pre>
+
+<p><i>Note:</i> px is on of the available units. Read more about other CSS units <a href="https://mdbootstrap.com/education/css/chapter-2-lesson-8/">here</a>.</p>
+
+<p>And change font ouf our title:</p>
+
+<pre><code>
+font-family: Courier New;
+</code></pre>
+
+<p><i>Note:</i> you can change not only font kind but also other properties. Read more about other CSS fonts <a href="https://mdbootstrap.com/education/css/chapter-1-lesson-10/">here</a>.</p>
+
+<p>And change it's weight to normal:</p>
+
+<pre><code>
+font-weight: normal;
+</code></pre>
+
+<p>We are almost done with title. However you may notice that we have a huge gap in between our title and subtitle. </p>
+
+<p>This is because web browser automatically adds default margins to heading elements. Let's check this in inspector tool. </p>
+
+<img src="assets/margins.jpg" alt="Default margins">
+
+<p>Let's remove bottom margin using css:</p>
+
+<pre><code>
+margin-bottom: 0px;
+</code></pre>
+
+<p><i>Note:</i> each ellement in HTML has padding, border and margin, it's so called box model. Read more about box model <a href="https://mdbootstrap.com/education/css/chapter-1-lesson-5/">here</a>.</p>
+
+
+<h2>Styling subtitle</h2>
+
+<p>Again change size, position and font:</p>
+
+<pre><code>
+.subtitle{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+</code></pre>
+
+<h2>Button</h2>
+
+<p>Finally let's adjust our button. things you already know: width, height, font family, font, weight:</p>
+
+<pre><code>
+.register{
+    width:180px;
+    height:50px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+</code></pre>
+
+<p>Let's use margin to center our button:</p>
+
+<pre><code>
+margin: 50px auto;
+display: block;
+</code></pre>
+
+<p>This new syntax for margin is shorter version, instead of writing following:</p>
+
+<pre><code>
+margin-top: 25px;
+margin-right: 50px;
+margin-bottom: 75px;
+margin-left: 100px;
+</code></pre>
+
+<p>We can use:</p>
+
+<pre><code>
+margin: 25px 50px 75px 100px;
+</code></pre>
+
+<p>Which in our case means that we are setting top margin to 50px and all other to auto (to be decided by browser). </p>
+
+<p>We also added new property - display:block. For now you just have to know that there are block and inline type of elements in CSS. Block-level elements always starts on a new line, while inline elemtns does not start a new line. Siimple test:</p>
+
+<pre><code>
+<p>Paragraph 1</p> <p>Paragraph 2</p>
+<span>Span 1</span><span>Span 2</span>    
+</code></pre>
+
+<p>Paragraphs starts in a new line (since by deafult they block elements), while spans are displayed next to each other - they are inline elements.</p>
+
+<!-- Read more about display:
+TODO -->
+
+<p>Let's change background of our button:</p>
+
+<pre><code>
+background-color: rgba(0,0,0,0);
+</code></pre>
+
+<p>Instead of providing a color name, we used it's RGB value , the last number is opacity value. 0 makes color totally transparent.</p>
+
+<p><i>Note:</i>Read more about CSS colors <a href="https://mdbootstrap.com/education/css/chapter-1-lesson-7/">here</a></p>
+
+<p>Finally , lets change border of our button:</p>
+
+<pre><code>
+border: 3px solid white;
+</code></pre>
+
+<p>And give it some curve:</p>
+
+<pre><code>
+border-radius: 5px;
+</code></pre>
+
+
+<p><i>Note:</i>Read more about borders <a href="https://mdbootstrap.com/education/css/chapter-1-lesson-4/">here</a></p>
+
+
+<p>Our website is ready. But let's make it even more fantastic and add some animation. We will add some animation to our button when someone hover mouse pointer over it.</p>
+
+<pre><code>
+.register:hover{
+    background-color: white;
+    color: #222222;
+}
+</code></pre>
+
+<p>As you can see we are applying style to .register class but also specyfing that we ant to apply style only when someone hover over this element.</p>
+
+<p>It works cool, but how about make it more smooth? </p>
+
+<p>Let's update both .register and .register:hover clasess accordingly:</p>
+
+<pre><code>
+.register{
+    width:180px;
+    height:50px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px auto;
+    display: block;
+    background-color: rgba(0,0,0,0);
+    border: 3px solid white;
+    border-radius: 5px;
+
+    transition: background-color 1000ms, color 1000ms;
+}
+
+.register:hover{
+    background-color: white;
+    color: #222222;
+
+    transition: background-color 1000ms, color 1000ms;
+}
+</code></pre>
+
+<h2>Wooho! Our website is ready! Good job!</h2>
