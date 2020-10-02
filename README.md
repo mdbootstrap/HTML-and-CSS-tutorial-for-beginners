@@ -4,6 +4,7 @@
 You will learn basics of HTML and CSS 
 
 ## What will I build? 
+One Page Web Page using basics of HTML and CSS.
 
 ![Preview](https://mdbootstrap.com/wp-content/themes/mdbootstrap4/content/en/education/developer-roadmap/html/basics/tutorial/assets/preview.gif)
 
